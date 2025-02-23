@@ -98,7 +98,7 @@ def decrypt_file(encrypted_file, aes_key, dna_key):
 
     original_data = decrypt_data(rna_sequence, aes_key, dna_key)
 
-    output_file = encrypted_file.replace(".rnaenc", ".decrypted")
+    output_file = encrypted_file.replace(".rnaenc", "")
     with open(output_file, "wb") as f:
         f.write(original_data)
 
