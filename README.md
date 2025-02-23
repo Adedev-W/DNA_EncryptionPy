@@ -30,7 +30,7 @@ pip install pycryptodome
 ### **1. Encrypting Text**
 
 ```python
-from script import encrypt_text, generate_long_key
+from dna_enc import encrypt_text, generate_long_key
 
 aes_key = b"my_secure_aes_key_32_bytes_length"
 dna_key = generate_long_key()
@@ -46,7 +46,7 @@ print("Encrypted RNA:", encrypted_rna)
 ### **2. Decrypting Text**
 
 ```python
-from script import decrypt_text
+from dna_enc import decrypt_text
 
 # Decryption
 decrypted_text = decrypt_text(encrypted_rna, aes_key, dna_key)
@@ -57,7 +57,7 @@ print("Decrypted Text:", decrypted_text)
 ### **3. Encrypting a File**
 
 ```python
-from script import encrypt_file
+from dna_enc import encrypt_file
 
 file_path = "data.txt"
 encrypt_file(file_path, aes_key, dna_key)
@@ -67,7 +67,7 @@ encrypt_file(file_path, aes_key, dna_key)
 ### **4. Decrypting a File**
 
 ```python
-from script import decrypt_file
+from dna_enc import decrypt_file
 
 encrypted_file = "data.txt.rnaenc"
 decrypt_file(encrypted_file, aes_key, dna_key)
